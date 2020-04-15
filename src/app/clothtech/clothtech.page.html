@@ -14,12 +14,12 @@
     <img src="/assets/scan.jpeg" alt="" />
     <ion-card-header>
       <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title> QR Code and Barcode </ion-card-title>
+      <ion-card-title> QR Code </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Here we can scan a Qr code or Barcode to get data and we will also see how to generate Barcode.</p>
+      <p>Here we can scan a Qr code or Barcode to get data</p>
     </ion-card-content>
-    <ion-button expand='block' margin (click)="goToQrScan()">Click to scan a barcode</ion-button>
+    <ion-button expand='block' margin (click)="goToQrScan()">Click to scan a QR</ion-button>
     <div *ngIf="scannedData">
       <p>
         Scanned Code Text : <b>{{ scannedData["text"] }}</b>
@@ -38,4 +38,6 @@
       Create QR
     </ion-button>
   </ion-card>
+
+  <ion-button type="submit" (click)="authService.SignOut()" expand="block">Logout</ion-button>
 </ion-content>

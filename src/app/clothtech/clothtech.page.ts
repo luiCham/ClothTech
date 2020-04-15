@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
+import { AuthenticationService } from "../shared/authentication-service";
 
 @Component({
   selector: 'app-clothtech',
@@ -11,7 +12,7 @@ export class ClothtechPage implements OnInit {
   QRSCANNED_DATA: string;
   isOn = false;
   scannedData: {};
-  constructor(public qrScanCtrl: QRScanner) { }
+  constructor(public qrScanCtrl: QRScanner, public authService: AuthenticationService) { }
 
   goToQrScan() {
     this.qrScanCtrl.prepare()

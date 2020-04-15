@@ -1,0 +1,23 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBnQkzN2qVMNxNWCP_Ydi1-76oU5HaXdMI",
+    authDomain: "clothtech-4218a.firebaseapp.com",
+    databaseURL: "https://clothtech-4218a.firebaseio.com",
+    projectId: "clothtech-4218a",
+    storageBucket: "clothtech-4218a.appspot.com",
+    messagingSenderId: "194011948833",
+    appId: "1:194011948833:web:56c4b0182900c9be21c060",
+    measurementId: "G-18LLL2SR8D"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
