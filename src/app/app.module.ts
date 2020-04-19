@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -32,7 +32,7 @@ import { environment } from '../environments/environment';
   providers: [
     StatusBar,
     SplashScreen,
-    QRScanner,
+    BarcodeScanner,
     AngularFirestoreModule,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

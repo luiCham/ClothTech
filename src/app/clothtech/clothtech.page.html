@@ -19,7 +19,7 @@
     <ion-card-content>
       <p>Here we can scan a Qr code or Barcode to get data</p>
     </ion-card-content>
-    <ion-button expand='block' margin (click)="goToQrScan()">Click to scan a QR</ion-button>
+    <ion-button expand='block' margin (click)="scan()">Click to scan a QR</ion-button>
     <div *ngIf="scannedData">
       <p>
         Scanned Code Text : <b>{{ scannedData["text"] }}</b>
@@ -30,14 +30,6 @@
     </div>
   </ion-card>
 
-  <ion-card>
-    <h1>Enter Value to Create QR code</h1>
-    <ion-input type="text" [(ngModel)]="encodedData"></ion-input>
-
-    <ion-button (click)="goToCreateCode()">
-      Create QR
-    </ion-button>
-  </ion-card>
 
   <ion-button type="submit" (click)="authService.SignOut()" expand="block">Logout</ion-button>
 </ion-content>
