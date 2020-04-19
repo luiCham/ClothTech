@@ -8,7 +8,6 @@ import { AuthenticationService } from "../shared/authentication-service";
   styleUrls: ['./clothtech.page.scss'],
 })
 export class ClothtechPage implements OnInit {
-  encodedData = '';
   QRSCANNED_DATA: string;
   isOn = false;
   scannedData: {};
@@ -16,7 +15,8 @@ export class ClothtechPage implements OnInit {
 
   scan(){
     this.barcodeScanner.scan().then(barcodeData => {
-      
+      alert("Barcode data " + JSON.stringify(barcodeData));
+      this.scannedData = barcodeData;
     }).catch(err => {
       // error
     });
