@@ -1,0 +1,27 @@
+
+ion-grid{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+ion-title{
+    font-family: 'Redressed';
+    color: #42d77d;
+    text-align: center;
+    font-size: 250%;
+    padding-bottom: 15%;
+    padding-top: 20%;
+}
+#loogin{
+    text-transform: none;
+    --background: #42d77d;
+}
+#glogin{
+    text-transform: none;
+}
+#signapgrid{
+    text-align: center;
+}
+#signap{
+    color: var(--ion-color-success-tint);
+    text-transform: none;
+}

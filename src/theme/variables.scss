@@ -3,6 +3,8 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-font-family: 'Quicksand';
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,6 +76,21 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  ion-item{
+    --background: white;
+    --border-color: var(--ion-color-success-tint);
+    --highlight-color-focused: var(--ion-color-success-tint);
+    &.item-has-focus > ion-label{
+      color: var(--ion-color-success-tint) !important;
+    }
+  }
+
+  ion-app{
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -229,4 +246,17 @@
   ion-title.title-large {
     --color: white;
   }
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/Quicksand/static/Quicksand-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Redressed';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/fonts/Redressed/Redressed-Regular.ttf');
 }

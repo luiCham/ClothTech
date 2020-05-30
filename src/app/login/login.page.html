@@ -1,42 +1,45 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Sign in</ion-title>
-  </ion-toolbar>
+<ion-header padding style="--background-color: red">
 </ion-header>
 
-<ion-content>
-  <form>    
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item> 
-
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
-
+<ion-content padding>
+  <ion-title>ClothTech</ion-title>
+  <ion-grid align-content-center>
+    <form>    
+      <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" #email required></ion-input>
+      </ion-item> 
+  
+      <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" #password required></ion-input>
+      </ion-item>
+  
+      <ion-row>
+        <ion-col> 
+        <ion-button id="loogin" type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+  <ion-grid content-align-center>
+    <form>
+      <ion-row>
+        <ion-col> 
+          <ion-button block type="submit" id="glogin" color="danger" (click)="authService.GoogleAuth()" expand="block">
+             Login with Google
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+  <ion-grid content-align-center id="signapgrid">
     <ion-row>
-      <ion-col> 
-      <ion-button type="submit" (click)="logIn(email, password)" expand="block" keyup="enter">Login</ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
-  <form>
-    <ion-row>
-      <ion-col> 
-        <ion-button 
-         type="submit" 
-         color="success"
-         (click)="authService.GoogleAuth()" 
-         expand="block">
-           Login with Google
+      <ion-col>
+        <ion-button id="signap" shape="round" text-align="center" href="registration" fill="clear">
+          Sign up!
         </ion-button>
       </ion-col>
     </ion-row>
-  </form>
-  or <a href="registration">register</a>
+  </ion-grid>
 </ion-content>

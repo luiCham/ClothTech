@@ -1,0 +1,33 @@
+#t1{
+    padding-top: 25%;
+    padding-bottom: 2%;
+    font-size: 150%;
+    color: var(--ion-color-success-tint);
+}
+#t2{
+    font-size: 100%;
+    padding-bottom: 5%;
+    color: var(--ion-color-medium);
+}
+#signapb{
+    text-transform: none;
+    --background: var(--ion-color-success-tint);
+}
+ion-title{
+    color: #ffffff;
+}
+ion-label{
+    color: var(--ion-color-light) !important;
+}
+ion-grid{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#login{
+    color: var(--ion-color-success-tint);
+}
+#logingrid{
+    text-transform: none;
+    text-align: center;
+    align-content: center;
+}
