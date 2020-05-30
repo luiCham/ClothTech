@@ -91,6 +91,10 @@
     --ion-text-color: #000000;
   }
 
+  ion-card{
+    --background: #ffffff;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {

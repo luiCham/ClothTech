@@ -2,44 +2,41 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-title>ClothTech</ion-title>
-  <ion-grid align-content-center>
-    <form>    
-      <ion-item lines="full">
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" #email required></ion-input>
-      </ion-item> 
-  
-      <ion-item lines="full">
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" #password required></ion-input>
-      </ion-item>
-  
+  <ion-grid align-content-center id="grid1">
+      <ion-title id="t1">Log in</ion-title>
+      <ion-title id="t2">Welcome to ClothTech!</ion-title>
+      <form>    
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" #email required></ion-input>
+        </ion-item> 
+    
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" #password required></ion-input>
+        </ion-item>
+    
+        <ion-row>
+          <ion-col> 
+          <ion-button id="loogin" type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+      <form>
+        <ion-row>
+          <ion-col> 
+            <ion-button block type="submit" id="glogin" color="danger" (click)="authService.GoogleAuth()" expand="block">
+               Login with Google
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
       <ion-row>
-        <ion-col> 
-        <ion-button id="loogin" type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
-        </ion-col>
-      </ion-row>
-    </form>
-  </ion-grid>
-  <ion-grid content-align-center>
-    <form>
-      <ion-row>
-        <ion-col> 
-          <ion-button block type="submit" id="glogin" color="danger" (click)="authService.GoogleAuth()" expand="block">
-             Login with Google
+        <ion-col>
+          <ion-button id="signap" shape="round" text-align="center" href="registration" fill="clear">
+            Sign up!
           </ion-button>
         </ion-col>
       </ion-row>
-    </form>
-  </ion-grid>
-  <ion-grid content-align-center id="signapgrid">
-    <ion-row>
-      <ion-col>
-        <ion-button id="signap" shape="round" text-align="center" href="registration" fill="clear">
-          Sign up!
-        </ion-button>
-      </ion-col>
-    </ion-row>
   </ion-grid>
 </ion-content>
